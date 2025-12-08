@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samie Sayed (Atif) — Presidential Campaign</title>
+
+  <!-- Google Fonts: Urdu -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet">
+  <!-- System fonts for Hinglish/Hindi fallback -->
+  <style>
+    :root {
+      --overlay: rgba(0,0,0,0.55);
+      --card-bg: rgba(255,255,255,0.9);
+      --text: #1c1c1c;
+      --accent: #1f7a8c;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #fff;
+    }
+
+    /* Background */
+    .bg {
+      position: fixed;
+      inset: 0;
+      background: url("https://ibb.co/b5Fb4WGc") center/cover no-repeat;
+      z-index: -2;
+    }
+    .bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--overlay);
+      z-index: -1;
+    }
+
+    /* Layout */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 20px;
+    }
+    header {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.2);
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    .sub {
+      margin: 0;
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .intro {
+      background: var(--card-bg);
+      color: var(--text);
+      border-radius: 10px;
+      padding: 16px;
+      margin: 24px 0;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    .intro p { margin: 0; font-size: 18px; }
+
+    /* Language selection */
+    .lang-card {
+      background: var(--card-bg);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+    .lang-title {
+      margin: 0 0 12px;
+      font-size: 20px;
+      color: #0e2a36;
+    }
+    .lang-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 2px solid #0e2a36;
+      color: #0e2a36;
+      background: #fff;
+      padding: 12px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.18s ease;
+    }
+    .lang-btn:hover {
+      background: #0e2a36;
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    footer {
+      margin-top: 28px;
+      font-size: 12px;
+      opacity: 0.9;
+      text-align: center;
+    }
+
+    /* Urdu font preview line */
+    .urdu {
+      font-family: "Noto Nastaliq Urdu", serif;
+      word-spacing: 3px;
+      text-align: justify;
+    }
+
+    @media (max-width: 520px) {
+      header { grid-template-columns: 80px 1fr; }
+      .avatar { width: 80px; height: 80px; }
+      h1 { font-size: 22px; }
+    }
+
+    .bismillah{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 2rem;
+      mix-blend-mode: multiply;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg"></div>
+
+  <div class="container">
+    <div class="bismillah">
+      <img src="images/Bismillah.jpeg" alt="bismillah-img" width="100%">
+    </div>
+    <header>
+      <div class="avatar">
+        <img src="images/Self.jpg" alt="Photo of Samie Sayed (Atif)" />
+      </div>
+      <div>
+        <h1>Samie Sayed (Atif)</h1>
+        <p class="sub">Son of Khamis Rizvi</p>
+        <p class="sub">Standing for President — Mosque Committee</p>
+      </div>
+    </header>
+
+    <div class="intro">
+      <p class="urdu">
+        Hamari community ke liye ek roshan mustaqbil ki tayyari. Tabdeeli, taraqqi aur ittehad ke liye vote dein. Aap ki himayat ki darkhawast ek mazboot masjid ke liye.
+      </p>
+    </div>
+
+    <section class="lang-card">
+      <h2 class="lang-title">Choose your preferred language</h2>
+      <div class="lang-grid">
+        <a class="lang-btn" href="content.html?lang=urdu" aria-label="View in Urdu">Urdu</a>
+        <a class="lang-btn" href="content.html?lang=hinglish" aria-label="View in Hinglish">Hinglish</a>
+        <a class="lang-btn" href="content.html?lang=hindi" aria-label="View in Hindi">Hindi</a>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Samie Sayed (Atif). Campaign website.
+    </footer>
+  </div>
+</body>
+</html>
